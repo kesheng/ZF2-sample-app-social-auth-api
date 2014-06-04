@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <h2>Contact Form</h2>
+    <form id="ContactForm">
+        <div>
+            <?php $form->prepare(); ?>
+
+            <?php echo $this->form()->openTag($form); ?>
+
+
+
+            <?php echo $this->formRow($form->get('txtName')); ?>
+            <?php echo $this->formRow($form->get('txtEmail')); ?>
+            <?php echo $this->formRow($form->get('txtPhone')); ?>
+            <?php echo $this->formRow($form->get('txtQqNumber')); ?>
+            <?php echo $this->formRow($form->get('txtComment')); ?>
+
+
+            <!-- <div class="wrapper">
+                <span>Your name:</span><input type="text" class="input" >
+            </div>
+            <div class="wrapper">
+                <span>Your E-mail:</span><input type="text" class="input" >                                
+            </div>
+            <div class="textarea_box">
+                <span>Your message:</span><textarea name="textarea" cols="1" rows="1"></textarea>                               
+            </div>
+            <span>&nbsp;</span>
+            <a href="#" class="button" onClick="document.getElementById('ContactForm').reset()">Clear</a>
+            <a href="#" class="button" onClick="document.getElementById('ContactForm').submit()">Send</a> -->
+
+
+            <?php echo $this->formHidden($form->get('csrf')); ?>
+            <?php echo $this->formInput($form->get('submit')); ?>
+
+            <?php echo $this->form()->closeTag($form); ?>
+        </div>
+    </form>
+</div>
